@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <!-- Fine dot grid -->
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="white"/>
+    </pattern>
+    <!-- Larger accent dots -->
+    <pattern id="bigdots" x="0" y="0" width="72" height="72" patternUnits="userSpaceOnUse">
+      <circle cx="36" cy="36" r="2" fill="white" opacity="0.6"/>
+    </pattern>
+    <!-- Horizontal longitude lines -->
+    <pattern id="hlines" x="0" y="0" width="800" height="50" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="25" x2="800" y2="25" stroke="white" stroke-width="0.4" stroke-dasharray="4 8"/>
+    </pattern>
+    <!-- Vertical meridian lines -->
+    <pattern id="vlines" x="0" y="0" width="80" height="500" patternUnits="userSpaceOnUse">
+      <line x1="40" y1="0" x2="40" y2="500" stroke="white" stroke-width="0.4" stroke-dasharray="4 12"/>
+    </pattern>
+  </defs>
+
+  <!-- Base dot grid -->
+  <rect width="800" height="500" fill="url(#dots)" opacity="0.7"/>
+  <!-- Accent dots at grid intersections -->
+  <rect width="800" height="500" fill="url(#bigdots)"/>
+  <!-- Latitude-style horizontal dashes -->
+  <rect width="800" height="500" fill="url(#hlines)" opacity="0.5"/>
+  <!-- Meridian-style vertical dashes -->
+  <rect width="800" height="500" fill="url(#vlines)" opacity="0.4"/>
+
+  <!-- Abstract continent-like blobs (simplified outlines) -->
+  <g fill="none" stroke="white" stroke-width="0.8" opacity="0.5">
+    <!-- Americas rough outline -->
+    <path d="M 80 60 C 100 40, 130 50, 140 80 C 150 110, 130 140, 120 170
+             C 110 200, 115 230, 105 260 C 95 290, 70 310, 60 340
+             C 50 370, 65 400, 55 430 L 45 440 C 35 420, 20 390, 30 360
+             C 40 330, 60 310, 70 280 C 80 250, 75 220, 85 190
+             C 95 160, 110 130, 100 100 C 90 70, 75 65, 80 60 Z"/>
+    <!-- Europe/Africa rough outline -->
+    <path d="M 310 30 C 340 20, 370 35, 380 60 C 390 85, 375 110, 360 130
+             C 345 150, 350 180, 340 210 C 330 240, 310 260, 320 290
+             C 330 320, 350 345, 340 375 C 330 405, 305 430, 295 460
+             L 285 470 C 278 445, 270 415, 280 385 C 290 355, 310 330, 300 300
+             C 290 270, 270 250, 265 220 C 260 190, 275 165, 270 140
+             C 265 115, 248 95, 255 70 C 262 45, 290 25, 310 30 Z"/>
+    <!-- Asia rough outline -->
+    <path d="M 450 25 C 500 15, 560 30, 590 55 C 620 80, 625 120, 615 155
+             C 605 190, 580 215, 570 245 C 560 275, 575 305, 560 330
+             C 545 355, 510 370, 495 395 L 480 410
+             C 465 385, 445 355, 455 325 C 465 295, 490 275, 485 245
+             C 480 215, 455 195, 448 165 C 441 135, 450 105, 440 75
+             C 430 45, 415 30, 450 25 Z"/>
+  </g>
+
+  <!-- Compass-rose hint at bottom right -->
+  <g transform="translate(740,440)" stroke="white" stroke-width="0.6" opacity="0.35" fill="none">
+    <circle cx="0" cy="0" r="22"/>
+    <circle cx="0" cy="0" r="14" stroke-dasharray="3 5"/>
+    <line x1="0" y1="-22" x2="0" y2="22"/>
+    <line x1="-22" y1="0" x2="22" y2="0"/>
+    <line x1="-15" y1="-15" x2="15" y2="15" opacity="0.5"/>
+    <line x1="15" y1="-15" x2="-15" y2="15" opacity="0.5"/>
+  </g>
+</svg>
