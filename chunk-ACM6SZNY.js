@@ -1,1 +1,0 @@
-import{b as d}from"./chunk-INQ674WN.js";import{T as e,oa as n}from"./chunk-YMUQ4H7K.js";var c=class r{products=n(d);getById(o){return this.products().find(t=>t.id===o)}static \u0275fac=function(t){return new(t||r)};static \u0275prov=e({token:r,factory:r.\u0275fac,providedIn:"root"})};export{c as a};
